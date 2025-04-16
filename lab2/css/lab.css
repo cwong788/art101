@@ -7,3 +7,17 @@
     border: solid 1px #888;
     background-color: #DDD8C4;
   }
+
+h1 {
+  color: #244b5b;
+  font-size: 300%;
+}
+
+p {
+  text-indent: 30px;
+}
+
+#content {
+  background-color:#888;
+  border: dotted 10px #DDD8C4;
+}
