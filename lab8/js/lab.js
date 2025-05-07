@@ -27,6 +27,14 @@ var result = array.map(function(x){
 })
 console.log("Added 10 to each number in array: ", result);
 
+// Your map results data
+var mapResults = "Original array: " + array + "<br>Double the array: " + array.map(double) + "<br>Added 10 to each number in array: " + result;
+
+// Use jQuery to select the element by its ID and set the HTML content
+$("#output").html(mapResults);
+//var mapResults = "Double the array: " + array.map(double);
+//$("#output").html(mapResults);
+
 // this is an example function and this comment tells what it doees and what parameters are passed to it.
 function myFunction(param1, param2) {
   // some code here
