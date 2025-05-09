@@ -8,29 +8,15 @@
 
 // Output
 
-// Use jQuery to add buttons for challenge, problems, and results section
-$("#challenge").append("<button id='button-challenge'>Make Special</button>");
-$("#problems").append("<button id='button-problems'>Make Special</button>");
-$("#reflection").append("<button id='button-reflection'>Make Special</button>");
-$("#results").append("<button id='button-results'>Make Special</button>");
+// Use jQuery to add buttons for each section with the "minor-section" id
+$(".minor-section").append("<button class='button-special'>Make Special</button>");
 
-// Add a click listener to the three buttons: challenge, problems, results
-$("#button-challenge").click(function(){
-    // now add (or subtract) the "special" class to the section
-    $("#challenge").toggleClass("special");
-});
-$("#button-problems").click(function(){
-    // now add (or subtract) the "special" class to the section
-    $("#problems").toggleClass("special");
-});
-$("#button-reflection").click(function(){
-    // now add (or subtract) the "special" class to the section
-    $("#reflection").toggleClass("special");
-});
-$("#button-results").click(function(){
-    // now add (or subtract) the "special" class to the section
-    $("#results").toggleClass("special");
-});
+// Add a click listener to all buttons with the "button-special" class
+$(".button-special").click(function(){
+  // "this" refers to the button being clicks
+  // Then we traverse the DOM to the parent
+  $(this).parent().toggleClass("special");
+})
 
 // this is an example function and this comment tells what it doees and what parameters are passed to it.
 function myFunction(param1, param2) {
