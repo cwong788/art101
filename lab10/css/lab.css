@@ -29,4 +29,11 @@
   text-align: left;
 }
 
+/* Source: https://stackoverflow.com/questions/9090011/alternate-coloring-of-div-elements-css */
+.text:nth-child(odd) {
+  text-align: right;
+}
 
+.text:nth-child(even) {
+  text-align: left;
+}
