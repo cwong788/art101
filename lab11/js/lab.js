@@ -11,14 +11,36 @@ function sortString(inputString) {
   return inputString.split('').sort().join('');
 }
 
-// click listener for button
+// sortAnagram function shuffles the name to create an anagram
+// Reference: https://www.w3schools.com/js/js_array_sort.asp#mark_random
+function sortAnagram(name) {
+  var userName = name;
+  // Split string into an array
+  var arrayName = userName.split('');
+  // Sort the array by doing so randomly
+  var sortedArray = arrayName.sort(function(){return 0.5 - Math.random();});
+  // Convert the array back to a string
+  var sortedName = sortedArray.join('');
+  // Return sorted name
+  return sortedName;
+}
+
+// click listener for normal submit button
 $("#submit").click(function(){
   // get value of input field
   const userName = $("#user-name").val();
-
   // now let's sort it
   userNameSorted = sortString(userName);
+  // append a new div to our output div
+  $("#output").append('<div class="text"><p>' + userNameSorted + '</p></div>');
+});
 
+// click listener for anagram submit button
+$("#anagram").click(function(){
+  // get value of input field
+  const userName = $("#user-name").val();
+  // now let's sort it
+  userNameSorted = sortAnagram(userName);
   // append a new div to our output div
   $("#output").append('<div class="text"><p>' + userNameSorted + '</p></div>');
 });
