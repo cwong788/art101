@@ -3,24 +3,24 @@
 // Date: 20 May 2025
 
 // Variables
+// Source for descriptino of houses: https://harrypotter.fandom.com/wiki/Hogwarts_Houses#The_four_Houses_of_Hogwarts
+// Second source for descriptino of houses: https://www.harrypotter.com/news/discover-your-hogwarts-house-on-wizarding-world 
+const houses = [
+  "House of Gryffindor: They value bravery, daringness, nerve, and chivalry. Their emblematic animal is the lion. Notable members include Harry Potter, Hermione Granger and Ron Weasley.",
+  "House of Hufflepuff: They value hard work, dedication, patience, loyalty, and fair play. Their emblematic animal is the badger. Notable members include Newt Scamander, Cedric Diggory and Nymphadora Tonks.",
+  "House of Ravenclaw: They value intelligence, knowledge, curiosity, creativity and wit. Their emblematic animal is the eagle. Notable members include Luna Lovegood, Gilderoy Lockhart and Filius Flitwick.",
+  "House of Slytherin: They value ambition, leadership, self-preservation, cunning and resourcefulness. Their emblematic animal is the serpent. Notable members include Severus Snape, Draco Malfoy and Lord Voldemort."
+];
 
 // Functions
 // Sorts user into a house based on number of letters in input
 function sortingHat(str) {
   // Count the letters in str and assigns it to variable length
   let length = str.length;
-  // Get remainder when dividing by 4
-  let mod = length % 4;
+  // Get remainder when dividing by the number of houses
+  let mod = length % houses.length;
   // Conditional that picks house based on remainder
-  if (mod == 0) {
-    return("House of Gryffindor");
-  } else if (mod == 1) {
-    return("House of Hufflepuff");
-  } else if (mod == 2) {
-    return("House of Ravenclaw");
-  } else {
-    return("House of Slytherin");
-  }
+  return houses[mod];
 }
 
 // click listener for sorting hat
