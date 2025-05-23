@@ -6,9 +6,9 @@
 
 // Functions
 // Function fizzBuzz loops through numbers 1 to 200 and outputs if they meet certain conditions
-function fizzBuzz() {
+function fizzBuzz(max) {
   result = "";
-  for(i = 1; i<=200; i++) {
+  for(i = 1; i<=max; i++) {
     if (i % 105 == 0) { // multiple of 3, 5, 7
       result += i + " FizzBuzzBoom!<br>";
     } else if (i % 21 == 0) { // multiple of 3, 7
@@ -27,12 +27,19 @@ function fizzBuzz() {
       result += i + "<br>"
     }
   }
-  $("#output").html(result);
+  $("#fizzbuzz").html(result);
 }
+
+// click listener for getting max number
+$("#button").click(function(){
+  // get value of input field
+  let max = $("#input").val();
+  // print numbers
+  fizzBuzz(max);
+});
 
 // Ask for user's name and sort it
 function main() {
-  fizzBuzz();
 }
 
 // let's get this party started
