@@ -15,3 +15,8 @@
   background-color: #e5d7f3;
   color: #38234f;
 }
+
+.self-photo {
+    margin: 10px;
+    max-width: 900px;
+  }
