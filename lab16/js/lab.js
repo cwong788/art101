@@ -1,6 +1,6 @@
 // lab.js - Javascript file for Lab 15
 // Author: Cindy Wong
-// Date: 29 May 2025
+// Date: 4 June 2025
 
 // Variables
 let link = "https://xkcd.com/info.0.json";
@@ -23,7 +23,7 @@ function comic() {
             let title = data.safe_title;
             let image = data.img;
             let alt = data.alt;
-            let result = '<div><h2>'+ title + '</h2><img src="' + image + '" title="' + alt + '"><br></div>'
+            let result = '<div><h2>'+ title + '</h2><img src="' + image + '" alt="' + alt + '" title="' + alt + '"><br></div>'
             $("#comic").html('<p>' + result + '</p>');
         },
         // What we do if the api call fails
